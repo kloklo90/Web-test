@@ -43,8 +43,8 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 ## List of tools
 Windows Machine
 Visual Studio IDE
-With Live Sass compiler
-Running http-server to create a local server to enable use of fetch on local json file
+With Live Sass compiler Extension
+Running http-server in the terminal to create a local server to enable use of fetch on local json file
 
 ## Anything you want to tell us?
 - Assumptions?
