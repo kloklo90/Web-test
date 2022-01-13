@@ -376,14 +376,24 @@ body {
   }
   
   .qty {
+      display: flex;
+      align-items: center;
       border: 1px solid $color-btn;
       border-radius: 3px;
-      span {
+      &__item {
           display: inline-block;
           text-align: center;
           width: 22px;
           overflow: auto; // to scroll if needed
-          line-height: 22px;
+          height: 22px;
+          border: none;
+          background-color: $color-ternary;
+          margin-top: 0;
+          margin-bottom: 0;
+      }
+      &__plus, &__minus {
+          color: $color-btn !important;
+          box-shadow: none;
       }
   }
 

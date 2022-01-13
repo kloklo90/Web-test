@@ -596,15 +596,31 @@ body {
 }
 
 .qty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid #448aff;
   border-radius: 3px;
 }
 
-.qty span {
+.qty__item {
   display: inline-block;
   text-align: center;
   width: 22px;
   overflow: auto;
-  line-height: 22px;
+  height: 22px;
+  border: none;
+  background-color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.qty__plus, .qty__minus {
+  color: #448aff !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=styles.css.map */

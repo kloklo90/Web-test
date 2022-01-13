@@ -74,7 +74,7 @@ I had a bit of a challenge getting the default challenge setup to work on my mac
 I ran out of time for the implementation of the checkout page functionality.
 I designed the checkout page with the products already inside. The quantity input element has value has min value of 1 and max value which is equal to the inventory qty.
 the input is changeable and buttons + and - also update the qty number value. 
-Both buttons have methods to change (increment or decrement) the quantity value. In the methods we verify the value is within range before making an update.
+Both buttons have methods to change (increment or decrement) the quantity value. In the methods we verify the value is within range before making an update, recalculate the cost of the article in the cart and update the subtotal and total values. We also need a currency format helper method.
 
 onsubmit --> when BUY NOW button is clicked.
 We check the cart size - using json stringify to make the post. If cart size is empty the buy now button is disabled.
