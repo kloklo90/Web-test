@@ -8,8 +8,14 @@
 // @import 'slick-theme';
 // @import 'slick';
 
+body {
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s; /* Safari */
+}
 
-.overlay {
+#overlay {
+    display: none;
     background: rgba(0,0,0,0.8);
     position: absolute;
     top: 0;
@@ -17,6 +23,9 @@
     width: 100%;
     height: 100%;
     z-index: 2;
+    &.open {
+        display: block;
+    }
 }
 
 .navbar {
@@ -30,19 +39,22 @@
         position: relative;
         z-index: 3; //When open place it before the overlay
         &__menu {
-            width: 110px;
             overflow: auto; // to enable scroll if needed
             background-color: $color-ternary;
-            position: absolute;
-            top: 5px;
-            right: 5px;
         }
-        .menu {
+        .menu-list {
             display: none;
-            margin-left: 13px;
-            margin-right: 2px;
+            padding-left: 13px;
+            padding-right: 2px;
+            background-color: $color-secondary;
+            position: fixed;
+            top: 30px;
+            right: 5px;
             &__item {
                 margin-bottom: 10px;
+            }
+            &--opened {
+                display: block;
             }
         }
         .menu-opener {
@@ -54,7 +66,7 @@
         &__menu {
             display: block;
         }
-        .menu {
+        .menu-list {
             flex-direction: row;
             &__item {
                 margin: 10px 0 10px;
@@ -71,7 +83,7 @@
    
 }
 
-.menu {
+.menu-list {
     padding: 0;
     &__item  {
         height: 36px;

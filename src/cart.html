@@ -16,23 +16,24 @@
   <title>💡 Khady S.</title>
 </head>
 
-<body class="cart-page">
-   <!-- NAVIGATION BAR -->
-   <div class="navbar">
+<body class="cart-page" onload="document.body.style.opacity='1'">
+
+  <!-- NAVIGATION BAR -->
+  <div class="navbar">
     <a class="logo" href="index.html">APPS</a>
-    <div class="navbar__menu">
-      <span class="menu-opener">MENU <i class="fas fa-bars"></i></span>
-      <ul class="menu">
-        <li class="menu__item">
+    <div class="navbar__menu menu">
+      <span onclick="toggleMenu()" class="menu-opener">MENU <i class="fas fa-bars"></i></span>
+      <ul class="menu-list">
+        <li class="menu-list__item">
           <a href="index.html">PRODUCTS</a>
         </li>
-        <li class="menu__item">
+        <li class="menu-list__item">
           <a href="index.html">NEWS</a>
         </li>
-        <li class="menu__item">
+        <li class="menu-list__item">
           <a href="index.html">CONTACT</a>
         </li>
-        <li class="menu__item your-cart">
+        <li class="menu-list__item your-cart">
           <a href="cart.html">
             <!-- <i class="fas fa-shopping-basket"></i> -->
             <?xml version="1.0" encoding="utf-8"?>
@@ -62,7 +63,7 @@
         or remove items before continuing purchase.
       </p>
       <div class="cart__content">
-        <div class="cart-item" id="product-id">
+        <div class="cart-item" id="AWDT0001-M">
           <h2 class="cart-item__name">Cotton T-shirt medium</h2>
           <div class="cart-item__price-details cart-line">
             <span class="bold">Price</span>
@@ -71,9 +72,15 @@
           <div class="cart-item__qty-details cart-line"">
             <span class="bold">Quantity</span>
             <div class="qty">
-              <span class="qty__minus">-</span>
-              <input type="number" id="quantity1" name="quantity" min="1" max="5" class="qty__number">
-              <span class="qty__plus">+</span>
+              <button onclick="reduceItem()" class="qty__minus">-</button>
+              <input type="number" 
+                id="quantity-AWDT0001-M"
+                class="qty__number"
+                name="quantity"
+                value="1"
+                min="1" max="50"
+              >
+              <button onclick="increaseItem()" class="qty__plus">+</button>
             </div>
           </div>
           <div class="cart-item__cost-details cart-line"">
@@ -81,12 +88,12 @@
             <span>&pound;10.99</span>
           </div>
           <div class="cart-item__remove cart-line"">
-            <span class="bold">Remove</span>
+            <span onclick="removeItem()" class="bold">Remove</span>
             <span><i class="far fa-trash-alt"></i></span>
           </div>
         </div>
 
-        <div class="cart-item" id="product-id">
+        <div class="cart-item" id="AWDT0002">
           <h2 class="cart-item__name">Baseball cap, one size</h2>
           <div class="cart-item__price-details cart-line">
             <span class="bold">Price</span>
@@ -95,14 +102,50 @@
           <div class="cart-item__qty-details cart-line"">
             <span class="bold">Quantity</span>
             <div class="qty">
-              <span class="qty__minus">-</span>
-              <span class="qty__number">2</span>
-              <span class="qty__plus">+</span>
+              <button onclick="reduceItem()" class="qty__minus">-</button>
+              <input type="number" 
+                id="quantity-AWDT0002"
+                class="qty__number"
+                name="quantity"
+                value="2" 
+                min="1" max="50"
+              >
+              <button onclick="increaseItem()" class="qty__plus">+</button>
             </div>
           </div>
           <div class="cart-item__cost-details cart-line"">
             <span class="bold">Cost</span>
-            <span>&pound;5.99</span>
+            <span>&pound;11.98</span>
+          </div>
+          <div class="cart-item__remove cart-line"">
+            <span class="bold">Remove</span>
+            <span><i class="far fa-trash-alt"></i></span>
+          </div>
+        </div>
+
+        <div class="cart-item" id="AWDT0003-M">
+          <h2 class="cart-item__name">Shorts, medium</h2>
+          <div class="cart-item__price-details cart-line">
+            <span class="bold">Price</span>
+            <span>&pound;14.99</span>
+          </div>
+          <div class="cart-item__qty-details cart-line"">
+            <span class="bold">Quantity</span>
+            <div class="qty">
+              <button onclick="reduceItem()" class="qty__minus">-</button>
+              <input type="number" 
+                id="quantity-AWDT0003-M"
+                class="qty__number"
+                name="quantity"
+                value="1" 
+                min="1" max="50"
+              >
+              <button onclick="increaseItem()" class="qty__plus">+</button>
+            </div>
+          </div>
+          <div class="cart-item__cost-details cart-line"">
+            <span class="bold">Cost</span>
+            <span>&pound;14.99</span>
           </div>
           <div class="cart-item__remove cart-line"">
             <span class="bold">Remove</span>
@@ -131,7 +174,9 @@
     </div>
 
   </div>
+  <script src="../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/app.js"></script>
+  <script src="../scripts/cart.js"></script>
 </body>
 </html>
-<!-- <script data-main="scripts/app" src="../scripts/require.js"></script> -->
-<script src="../scripts/app.js"></script>
+

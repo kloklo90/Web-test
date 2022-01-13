@@ -43,6 +43,7 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 ## List of tools
 Visual Studio IDE
 With Live Sass compiler
+Running http-server to create a local server to enable use of fetch on local json file
 
 ## Anything you want to tell us?
 - Assumptions?
@@ -68,6 +69,20 @@ I had a bit of a challenge getting the default challenge setup to work on my mac
 => *Easy translation menu EN/FR/DE* - The Website in Deutsch or French - I have worked with Shopify translation several times in Canada as having websites in English and in French is required very often from our clients
 => *Products Page with images*
 => *Client Homepage Customization* - I would have implemented custom components for the Client side giving the ability to change the look and feel of the whole homepage in less than 10mn on the customization panel of shopify. This would let the client be able to choose and update the slideshow images in the hero banner. Change/update the text content and positioning (eg. text block at the left instead of the right) in less than 10mn. Or even have several versions of the play and feel of the side with different themes so that the client can decide on his/her end which customization he would like to put live. It works great to give more autonomy to clients that feature special events/sales for xmas, Valentines day etc.
+
+### Task2 - PSEUDO-CODE
+I ran out of time for the implementation of the checkout page functionality.
+I designed the checkout page with the products already inside. The quantity input element has value has min value of 1 and max value which is equal to the inventory qty.
+the input is changeable and buttons + and - also update the qty number value. 
+Both buttons have methods to change (increment or decrement) the quantity value. In the methods we verify the value is within range before making an update.
+
+onsubmit --> when BUY NOW button is clicked.
+We check the cart size - using json stringify to make the post. If cart size is empty the buy now button is disabled.
+
+On SUCCESS SUBMIT we send a post with the cart products data. and display a div with Thank you for making a purchase.
+
+I read the products.json file with fetch and printed the have the object file
+On submit of the checkout update the product.json file. For each purchased element use element id and match to sku to update json file values.
 
 3. I would have spent *more time on QA testing on different devices*
 

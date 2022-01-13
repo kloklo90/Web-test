@@ -106,7 +106,15 @@ button:hover, .btn:hover {
   }
 }
 
-.overlay {
+body {
+  opacity: 0;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  /* Safari */
+}
+
+#overlay {
+  display: none;
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
@@ -114,6 +122,10 @@ button:hover, .btn:hover {
   width: 100%;
   height: 100%;
   z-index: 2;
+}
+
+#overlay.open {
+  display: block;
 }
 
 .navbar {
@@ -136,20 +148,23 @@ button:hover, .btn:hover {
     z-index: 3;
   }
   .navbar__menu {
-    width: 110px;
     overflow: auto;
     background-color: #fff;
-    position: absolute;
-    top: 5px;
+  }
+  .navbar .menu-list {
+    display: none;
+    padding-left: 13px;
+    padding-right: 2px;
+    background-color: #fafafa;
+    position: fixed;
+    top: 30px;
     right: 5px;
   }
-  .navbar .menu {
-    display: none;
-    margin-left: 13px;
-    margin-right: 2px;
-  }
-  .navbar .menu__item {
+  .navbar .menu-list__item {
     margin-bottom: 10px;
+  }
+  .navbar .menu-list--opened {
+    display: block;
   }
   .navbar .menu-opener {
     display: inline-block;
@@ -163,28 +178,28 @@ button:hover, .btn:hover {
   .navbar__menu {
     display: block;
   }
-  .navbar .menu {
+  .navbar .menu-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .navbar .menu__item {
+  .navbar .menu-list__item {
     margin: 10px 0 10px;
     border-radius: 3px;
   }
-  .navbar .menu__item a {
+  .navbar .menu-list__item a {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
 }
 
-.menu {
+.menu-list {
   padding: 0;
 }
 
-.menu__item {
+.menu-list__item {
   height: 36px;
   min-width: 80px;
   margin-bottom: 23px;
@@ -192,16 +207,16 @@ button:hover, .btn:hover {
   cursor: pointer;
 }
 
-.menu__item a {
+.menu-list__item a {
   white-space: nowrap;
   font-weight: 500;
 }
 
 @media only screen and (min-width: 768px) {
-  .menu__item {
+  .menu-list__item {
     position: relative;
   }
-  .menu__item a {
+  .menu-list__item a {
     position: absolute;
     top: 50%;
     -webkit-transform: translate(6px, -50%);
@@ -209,13 +224,13 @@ button:hover, .btn:hover {
   }
 }
 
-.menu__item:hover {
+.menu-list__item:hover {
   background-color: #d8d8d8;
   color: #fff;
 }
 
 @media only screen and (min-width: 768px) {
-  .menu {
+  .menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
