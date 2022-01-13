@@ -41,6 +41,7 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 - I ran out of time but I wanted to do some extensive testing with Browserstack Local as well to be able to test with several device simulations
  
 ## List of tools
+Windows Machine
 Visual Studio IDE
 With Live Sass compiler
 Running http-server to create a local server to enable use of fetch on local json file
