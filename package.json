@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/kloklo90/Web-test/issues"
   },
-  "homepage": "https://github.com/kloklo90/Web-test#readme"
+  "homepage": "https://github.com/kloklo90/Web-test#readme",
+  "devDependencies": {
+    "grunt": "^1.4.1"
+  }
 }
