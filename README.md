@@ -59,7 +59,8 @@ I had a bit of a challenge getting the default challenge setup to work on my mac
 
 ## What did you think of this test/exercise?
 ### What did you like?
-1.The cool toned layout. The color pallete is easy on the eyes.
+1. This web challenge has allowed me to think about workflow automation in depth. I previously used Gulp for work and it was a preset setup throughout the company. I was thus able to research Grunt for this exercise but also other workflow automation tools such as Webpack and Browserify. 
+1. The cool toned layout. The color pallete is easy on the eyes.
 2. Loved the Clean and concise UI/UX
 3. Picked up how to use Lunacy
 
@@ -115,3 +116,4 @@ This also allows for consistent margins, gutters, container sizes across website
 ### How long you spent?
 I spent 3 days trying to get the setup to work on my device.
 I started coding on monday, 2 days ago.
+I spent one day to resolve my setup issues.

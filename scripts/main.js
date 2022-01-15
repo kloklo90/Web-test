@@ -1,8 +1,1 @@
-// Adding an Autoplay Carousel to the Homepage Banner with a small fade in effect.
-$('.slideshow').slick({
-  dots: true,
-  infinite: true,
-  speed: 700,
-  fade: true,
-  autoplay: true
-});
+"use strict";function toggleMenu(){$(".navbar .menu-list").toggleClass("menu-list--opened")}$(".slideshow").slick({dots:!0,infinite:!0,speed:700,fade:!0,autoplay:!0}),fetch("../api/products/index.json").then(function(n){return n.json()}).then(function(n){console.log("Printing product data"),console.log(n)});

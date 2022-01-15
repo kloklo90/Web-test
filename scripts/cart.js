@@ -2,6 +2,7 @@
 fetch("../api/products/index.json").then(function(resp) {
   return resp.json();
 })
-.then(function(data) { 
+.then(function(data) {
+  console.log("Printing product data"); 
   console.log(data);
 });

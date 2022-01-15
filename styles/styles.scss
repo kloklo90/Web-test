@@ -29,7 +29,7 @@ body {
 }
 
 .navbar {
-    height: 40px;
+    height: 400px;
     padding: 8px $gutter-sm;
     display: flex;
     justify-content: space-between;
@@ -338,62 +338,26 @@ body {
 }
 
 
-.cart-page {
-    background-color: $color-cart;
-
-    .navbar {
-      box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
-      background-color: $color-ternary;
-    }
-    .cart__description {
+// Quantity button Styles  
+.qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid $color-btn;
+    border-radius: 3px;
+    &__item {
+        display: inline-block;
+        text-align: center;
+        width: 22px;
+        overflow: auto; // to scroll if needed
+        height: 22px;
+        border: none;
+        background-color: $color-ternary;
         margin-top: 0;
-        margin-bottom: 35px;
-        letter-spacing: 0.08px;
+        margin-bottom: 0;
     }
-    .cart h1, .cart p {
-        text-align: left;
+    &__plus, &__minus {
+        color: $color-btn !important;
+        box-shadow: none;
     }
-
-    .cart p, .cart span {
-        font-size: 14px;
-        line-height: 24px;
-        letter-spacing: 0.08px;
-    }
-    .cart-line {
-        width: 100%;
-        margin-bottom: 8px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .cart-item {
-        margin-bottom: 35px;
-        &__name {
-            padding: 12px 0;
-            border-bottom: 1px solid $color-primary;
-            font-size: 14px;
-        }
-    }
-  }
-  
-  .qty {
-      display: flex;
-      align-items: center;
-      border: 1px solid $color-btn;
-      border-radius: 3px;
-      &__item {
-          display: inline-block;
-          text-align: center;
-          width: 22px;
-          overflow: auto; // to scroll if needed
-          height: 22px;
-          border: none;
-          background-color: $color-ternary;
-          margin-top: 0;
-          margin-bottom: 0;
-      }
-      &__plus, &__minus {
-          color: $color-btn !important;
-          box-shadow: none;
-      }
-  }
+}
 

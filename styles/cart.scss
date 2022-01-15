@@ -1,6 +1,41 @@
 //Color pallette used in project
 @import 'colors';
-// Basic Styles and tags
-@import 'basics';
+
+.cart-page {
+  background-color: $color-cart;
+
+  .navbar {
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.25);
+    background-color: $color-ternary;
+  }
+  .cart__description {
+      margin-top: 0;
+      margin-bottom: 35px;
+      letter-spacing: 0.08px;
+  }
+  .cart h1, .cart p {
+      text-align: left;
+  }
+
+  .cart p, .cart span {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.08px;
+  }
+  .cart-line {
+      width: 100%;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .cart-item {
+      margin-bottom: 35px;
+      &__name {
+          padding: 12px 0;
+          border-bottom: 1px solid $color-primary;
+          font-size: 14px;
+      }
+  }
+}
 
 
